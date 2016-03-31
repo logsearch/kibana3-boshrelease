@@ -1,0 +1,5 @@
+check process kibana3
+  with pidfile /var/vcap/sys/run/kibana3/nginx.pid
+  start program "/var/vcap/jobs/kibana3/bin/kibana3_ctl start" 
+  stop program "/var/vcap/jobs/kibana3/bin/kibana3_ctl stop"
+  group vcap

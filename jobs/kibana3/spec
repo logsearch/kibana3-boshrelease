@@ -1,0 +1,21 @@
+---
+name: kibana3
+templates:
+  bin/kibana3_ctl: bin/kibana3_ctl
+  bin/pid_utils.sh: bin/pid_utils.sh
+  config/nginx.conf.erb: config/nginx.conf
+  config/mime.types: config/mime.types
+packages:
+- nginx
+- kibana3
+
+properties:
+  kibana3.elasticsearch:
+    description: IP address and port of elasticsearch host to proxy requests for (eg, 127.0.0.1:9200)
+    default: "127.0.0.1:9200"
+  kibana3.port:
+    description: "The port Kibana should listen on (eg, 80)"
+    default: 80
+  kibana3.default_route:
+    description: "The default Kibana dashboard url"
+    default: "/dashboard/file/default.json"
