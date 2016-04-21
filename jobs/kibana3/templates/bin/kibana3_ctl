@@ -24,6 +24,9 @@ case $1 in
     sed -i "s|/dashboard/file/default\.json|<%= p("kibana3.default_route") %>|"  /var/vcap/packages/kibana3/config.js
     sed -i "s|elasticsearch:.*|elasticsearch: \"http://\"+window.location.hostname,|"  /var/vcap/packages/kibana3/config.js
     
+    #Patch Kibana to stop it getting stuck on the "connectionFailed" screen during temporary network glitches
+    sed -i 's/\["\$location",function(a){return{responseError:function(b)/\["\$location",function(a){return{DISABLEDresponseError:function(b)/' /var/vcap/packages/kibana3/app/app.js
+    
     pid_guard $PIDFILE nginx
 
     echo $$ > $PIDFILE
