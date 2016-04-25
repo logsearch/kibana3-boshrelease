@@ -1,0 +1,25 @@
+---
+packages:
+- name: kibana3
+  version: 25bf76698745e21d7ebd7fa413638a9c536d11de
+  fingerprint: 25bf76698745e21d7ebd7fa413638a9c536d11de
+  sha1: bea88e9b7a1fb04310a9c36bf5b245986416b0d5
+  dependencies: []
+- name: nginx
+  version: 746d2139eadd388176d0ab1472667be8d2e96291
+  fingerprint: 746d2139eadd388176d0ab1472667be8d2e96291
+  sha1: 3cc7f11ccf17ef7b40f6577fc9869d36c7cd057b
+  dependencies: []
+jobs:
+- name: kibana3
+  version: 93218d30f8ef7aad5c15ac77fb98bca4cfbf0e36
+  fingerprint: 93218d30f8ef7aad5c15ac77fb98bca4cfbf0e36
+  sha1: 959079658ca359172b0ea504d892d1c49c0f1e13
+license:
+  version: e6c4ccc65c76e75e2338d1edabdcf264d37ee663
+  fingerprint: e6c4ccc65c76e75e2338d1edabdcf264d37ee663
+  sha1: 4ba3d213e237ae42d07dc93e808b900e8a7df9ea
+commit_hash: 3821e8a3
+uncommitted_changes: true
+name: kibana3
+version: '2'
